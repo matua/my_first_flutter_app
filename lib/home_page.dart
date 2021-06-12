@@ -20,10 +20,14 @@ class MyHomePage extends StatelessWidget {
           // Generate 100 widgets that display their index in the List.
           children: List.generate(100, (index) {
             return Center(
-              child: Text(
-                'Item $index',
-                style: Theme.of(context).textTheme.headline5,
-              ),
+              // child: Text(
+              //   'Item $index',
+              //   style: Theme.of(context).textTheme.headline5,
+              // ),
+              child: Expanded(
+                  child: FadeInImage.assetNetwork(
+                      placeholder: 'assets/images/no_internet_placeholder.jpeg',
+                      image: 'https://picsum.photos/id/$index/100')),
             );
           }),
         ),
